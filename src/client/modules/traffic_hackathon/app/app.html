@@ -1,0 +1,8 @@
+<template>
+    <template if:true={isUser}>
+        <user-home is-map-loaded={isMapLoaded}></user-home>
+    </template>
+    <template if:true={isAdmin}>
+        <admin-home is-map-loaded={isMapLoaded}></admin-home>
+    </template>
+</template>

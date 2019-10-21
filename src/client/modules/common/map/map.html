@@ -1,0 +1,15 @@
+<template>
+    <div class={computerClassNames}>
+        <div class="loader">Loading...</div>
+        <div map class="map_full" lwc:dom="manual"></div>
+    </div>
+    <template if:true={showIncidentForm}>
+        <common-incident-form
+            incident={currentIncident}
+            position-left={incidentFormPositionLeft}
+            position-top={incidentFormPositionTop}
+            onsave={handleSave}
+            oncancel={handleCancel}
+        ></common-incident-form>
+    </template>
+</template>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>My LWC App</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="shortcut icon" href="/resources/favicon.ico" />
+    </head>
+    <body>
+        <traffic-hackthon></traffic-hackthon>
+        <script>
+            var map;
+            function initMap() {
+                window.isMapLoaded = true;
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiah4wJxSTfSoPxXQFn2JWGWoR6EAZ6LI&callback=initMap"
+            type="text/javascript"
+        >
+        </script>
+    </body>
+</html>

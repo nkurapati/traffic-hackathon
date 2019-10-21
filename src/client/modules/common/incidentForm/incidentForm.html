@@ -1,0 +1,47 @@
+<template>
+    <div class="blocker">
+        &nbsp;
+    </div>
+    <div class="overlay" style={computedStyles}>
+        <div class="arrow-up"></div>
+        <form class="incident-form">
+            <div class="incident-form__element">
+                <label
+                    for="type"
+                    class="incident-form__element__label"
+                >Type</label>
+                <select
+                    id="type"
+                    name="type"
+                    value={incident.type}
+                    class="incident-form__element__select"
+                    onchange={handleChange}
+                >
+                    <option value="">Select Type</option>
+                    <template for:each={incidentTypes} for:item="incidentType">
+                        <option
+                            value={incidentType.value}
+                            key={incidentType.value}
+                        >{incidentType.label}</option>
+                    </template>
+                </select>
+            </div>
+            <div class="incident-form__element">
+                <label
+                    for="reason"
+                    class="incident-form__element__label"
+                >Reason</label>
+                <textarea
+                    class="incident-form__element__textarea"
+                    placeholder="Enter Reason"
+                    value={incident.reason}
+                    onchange={handleChange}
+                ></textarea>
+            </div>
+            <div class="button-wrpr">
+                <button class="button_cancel" onclick={handleCancel}>Cancel</button>
+                <button class="button_save" onclick={handleSave}>Save</button>
+            </div>
+        </form>
+    </div>
+</template>

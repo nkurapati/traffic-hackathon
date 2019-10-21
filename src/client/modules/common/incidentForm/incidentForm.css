@@ -1,0 +1,70 @@
+.blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    background: #ffffff;
+    box-shadow: 1px solid #c3c3c3;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffffff;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+}
+
+.incident-form {
+    min-width: 250px;
+}
+
+.incident-form__element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.incident-form__element__label {
+    font-size: 16px;
+    width: 38%;
+}
+.incident-form__element__select,
+.incident-form__element__textarea,
+.incident-form__element__input
+{
+    font-size: 16px;
+    width: 150px;
+    max-width: 150px;
+    margin: 0;
+    padding: 4px;
+}
+
+.button-wrpr {
+    text-align: right;
+}
+
+.incident-form button {
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.button_save {
+    background-color: green;
+    color: #ffffff;
+}
+.incident-form button + button {
+    margin-left: 10px;
+}

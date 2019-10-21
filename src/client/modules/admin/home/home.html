@@ -1,0 +1,61 @@
+<template>
+    <div class="home">
+        <div class="home__map">
+            <common-map
+                incidents={incidents}
+                onsave={handleSave}
+            ></common-map>
+        </div>
+        <div class="total-count">
+            {incidentsLabel}
+        </div>
+        <template if:true={incidents.length}>
+            <div class="home__incidents margin-top">
+                <div class="card">
+                    <div class="card__title">
+                        Accident
+                    </div>
+                    <div class="card__value">
+                        {groupedData.acc}
+                    </div>
+                </div>
+                <div class="card margin-left">
+                    <div class="card__title">
+                        Road Block
+                    </div>
+                    <div class="card__value">
+                        {groupedData.rb}
+                    </div>
+                </div>
+            </div>
+            <div class="home__incidents margin-top">
+                <div class="card">
+                    <div class="card__title">
+                        Vehicle Breakdown
+                    </div>
+                    <div class="card__value">
+                        {groupedData.vb}
+                    </div>
+                </div>
+                <div class="card margin-left">
+                    <div class="card__title">
+                        Water Logging
+                    </div>
+                    <div class="card__value">
+                        {groupedData.wl}
+                    </div>
+                </div>
+            </div>
+            <div class="home__incidents margin-top">
+                <div class="card">
+                    <div class="card__title">
+                        Pitholes
+                    </div>
+                    <div class="card__value">
+                        {groupedData.pothole}
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
